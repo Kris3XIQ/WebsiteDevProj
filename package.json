@@ -1,0 +1,22 @@
+{
+  "name": "website",
+  "version": "1.0.0",
+  "description": "Dev project",
+  "main": "index.js",
+  "scripts": {
+<<<<<<< HEAD
+    "compile": "sass --no-source-map src/css/style.scss  src/css/style.css && npm start"
+=======
+    "compile": "sass --no-source-map src/css/style.scss src/css/style.css && npm start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+>>>>>>> c73022178a8e9ee154cffd7f22b95f040b9cbaef
+  },
+  "author": "Kristoffer Markow",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.9",
+    "express": "^4.18.2",
+    "node-sass": "^9.0.0",
+    "sass": "^1.62.1"
+  }
+}

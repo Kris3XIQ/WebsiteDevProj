@@ -1,0 +1,75 @@
+:root {
+    /* Social color:
+        Facebook
+        Instagram
+        Linkedin    
+        Twitter
+        Youtube
+    */
+    --limegreen: hsl(163, 72%, 41%);
+    --brightred: hsl(356, 69%, 56%);
+    --facebook: hsl(208, 92%, 53%);
+    --twitter: hsl(203, 89%, 53%);
+    --instagram-start: hsl(37, 97%, 70%);
+    --instagram-middle: hsl(5, 77%, 71%);
+    --instagram-end: hsl(329, 70%, 58%);
+    --youtube: hsl(348, 97%, 39%);
+    --linkedin: hsl(201, 100%, 35%);
+    --toggle-bg-light: hsl(230, 22%, 74%);
+    --toggle-bg-start: hsl(210, 78%, 56%);
+    --toggle-bg-end: hsl(146, 68%, 55%);
+    --toggle-light: hsl(230, 19%, 60%);
+    --toggle-button-light: hsl(228, 46%, 96%);
+    
+    /* Theme colors:
+        Dark theme
+        Light theme
+    */
+    --dark-background-variant01: hsl(0, 0%, 7%);
+    --dark-background-variant02: hsl(0, 0%, 5%);
+    --dark-background-opacity: hsl(0, 0%, 7%);
+    --dark-font-variant01: hsl(228, 34%, 66%);
+    --dark-font-variant02: hsl(0, 0%, 100%);
+
+    --light-background-variant01: hsl(0, 0%, 100%);
+    --light-background-variant02: hsl(44, 89%, 93%);
+    --light-font-variant01: hsl(230, 12%, 44%);
+    --light-font-variant02: hsl(230, 17%, 14%);
+}
+
+/*
+    Applying colors to body, depending on theme:
+    Dark mode
+    Light mode
+*/
+
+body.light {
+    --background: var(--light-background-variant01);
+    --background02: var(--light-background-variant02)
+    --font-color: var(--light-font-variant01);
+    --font-color: var(--light-font-variant02);
+}
+
+body.dark {
+    --background: var(--dark-background-variant01);
+    --background02: var(--dark-background-variant02);
+    --font-color: var(--dark-font-variant01);
+    --font-color: var(--dark-font-variant02);
+}
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --background: var(--dark-background-variant01);
+        --text-color: var(--dark-font-variant02);
+        --text-color2: var(--dark-font-variant01);
+        --toggle: var(--light-background-variant01);
+        // --toggle-bg: linear-gradient(
+        //     225deg,
+        //     var(--toggle-bg-end) 0%,
+        //     var(--toggle-bg-start) 98.02%
+        // );
+        // --toggle-button: var(--dark-bg);
+        // --navbar-gradient: var(--navbar-dark-gradient);
+        // --accent-color1: var(--dark-accent-color1);
+    }
+}
