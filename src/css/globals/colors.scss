@@ -44,24 +44,41 @@
 */
 
 body.light {
-    --background: var(--light-background-variant01);
+    --background01: var(--light-background-variant01);
     --background02: var(--light-background-variant02)
-    --font-color: var(--light-font-variant01);
-    --font-color: var(--light-font-variant02);
+    --font-color01: var(--light-font-variant01);
+    --font-color02: var(--light-font-variant02);
 }
 
 body.dark {
-    --background: var(--dark-background-variant01);
+    --background01: var(--dark-background-variant01);
     --background02: var(--dark-background-variant02);
-    --font-color: var(--dark-font-variant01);
-    --font-color: var(--dark-font-variant02);
+    --font-color01: var(--dark-font-variant01);
+    --font-color02: var(--dark-font-variant02);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
         --background: var(--dark-background-variant01);
-        --text-color: var(--dark-font-variant02);
-        --text-color2: var(--dark-font-variant01);
+        --text-color01: var(--dark-font-variant02);
+        --text-color02: var(--dark-font-variant01);
+        --toggle: var(--light-background-variant01);
+        // --toggle-bg: linear-gradient(
+        //     225deg,
+        //     var(--toggle-bg-end) 0%,
+        //     var(--toggle-bg-start) 98.02%
+        // );
+        // --toggle-button: var(--dark-bg);
+        // --navbar-gradient: var(--navbar-dark-gradient);
+        // --accent-color1: var(--dark-accent-color1);
+    }
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: var(--light-background-variant01);
+        --text-color01: var(--light-font-variant01);
+        --text-color02: var(--dark-background-variant01);
         --toggle: var(--light-background-variant01);
         // --toggle-bg: linear-gradient(
         //     225deg,

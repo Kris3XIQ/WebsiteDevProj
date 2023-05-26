@@ -1,8 +1,4 @@
-<<<<<<< HEAD:src/css/components/ThemeToggle.scss
 @use '../utils' as *;
-=======
-@use '../utils/' as *;
->>>>>>> c73022178a8e9ee154cffd7f22b95f040b9cbaef:src/css/components/ThemeToggle/ThemeToggle.scss
 
 .theme-toggle-wrapper {
     display: flex;
@@ -15,31 +11,18 @@
     height: rem(24);
     width: rem(50);
     .theme-toggle-container {
-        border: 1px solid var(--font-color);
-<<<<<<< HEAD:src/css/components/ThemeToggle.scss
-        background-color: var(--light-background-variant01);
-        color: var(--font-color);
         align-items: center;
-        overflow: hidden;
-=======
-        background-color: transparent;
-        width: rem(24);
-        height: rem(24);
-        top: rem(-1);
-        position: absolute;
-        border-radius: 100%;
-        transition: .5s all ease;
-        z-index: 102;
-    }
-    .theme-toggle-background {
->>>>>>> c73022178a8e9ee154cffd7f22b95f040b9cbaef:src/css/components/ThemeToggle/ThemeToggle.scss
-        border-radius: rem(12);
-        width: 100%;
+        background-color: var(--dark-background-variant01);
+        border: 1px solid var(--font-color01);
+        border-radius: 0.75rem;
+        color: var(--text-color);
         height: 100%;
+        overflow: hidden;
         position: relative;
+        width: 100%;
         z-index: 101;
         .theme-toggle {
-            border: 1px solid var(--font-color);
+            border: 1px solid var(--font-color01);
             background-color: transparent;
             height: 100%;
             width: rem(24);
@@ -68,7 +51,7 @@
 }
 
 body {
-    &.light-mode {
+    &.light {
         #theme-toggle {
             transform: translateX(rem(26));
         }
@@ -96,7 +79,7 @@ body {
             transition: .2s ease-out;
         }
     }
-    &.dark-mode {
+    &.dark {
         #theme-toggle {
             transform: translateX(rem(-1));
         }
@@ -106,14 +89,14 @@ body {
             right: 6px;
             width: 14px;
             height: 14px;
-            background-color: #ffd712;
+            background-color: #ffffff;
             filter: blur(4px);
             transition: 0.2s ease-out;
         }
         #theme-toggle-background::after {
             content: "";
             position: absolute;
-            background-color: #ffd712;
+            background-color: #ffffff;
             width: 12px;
             height: 12px;
             top: initial;

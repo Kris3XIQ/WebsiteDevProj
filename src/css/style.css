@@ -1,5 +1,3 @@
-<<<<<<< HEAD
-=======
 html {
   font-size: 100%;
   box-sizing: border-box;
@@ -8,15 +6,30 @@ html {
   scroll-behavior: smooth;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 body {
   margin: 0;
   padding: 0;
+  font-family: var(--font-inter);
   background: var(--background);
-  color: var(--font-color);
+  color: var(--text-color);
   transition: 0.5s background ease;
 }
 
->>>>>>> c73022178a8e9ee154cffd7f22b95f040b9cbaef
+.visually-hidden {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 :root {
   /* Social color:
       Facebook
@@ -60,60 +73,35 @@ body {
     Light mode
 */
 body.light {
-  --background: var(--light-background-variant01);
+  --background01: var(--light-background-variant01);
   --background02: var(--light-background-variant02)
-  --font-color: var(--light-font-variant01);
-  --font-color: var(--light-font-variant02);
+  --font-color01: var(--light-font-variant01);
+  --font-color02: var(--light-font-variant02);
 }
 
 body.dark {
-  --background: var(--dark-background-variant01);
+  --background01: var(--dark-background-variant01);
   --background02: var(--dark-background-variant02);
-  --font-color: var(--dark-font-variant01);
-  --font-color: var(--dark-font-variant02);
+  --font-color01: var(--dark-font-variant01);
+  --font-color02: var(--dark-font-variant02);
 }
 
-<<<<<<< HEAD
 @media (prefers-color-scheme: dark) {
   :root {
     --background: var(--dark-background-variant01);
-    --text-color: var(--dark-font-variant02);
-    --text-color2: var(--dark-font-variant01);
+    --text-color01: var(--dark-font-variant02);
+    --text-color02: var(--dark-font-variant01);
     --toggle: var(--light-background-variant01);
   }
 }
-html {
-  font-size: 100%;
-  box-sizing: border-box;
-  max-width: 100%;
-  overflow-x: hidden;
-  scroll-behavior: smooth;
+@media (prefers-color-scheme: light) {
+  :root {
+    --background: var(--light-background-variant01);
+    --text-color01: var(--light-font-variant01);
+    --text-color02: var(--dark-background-variant01);
+    --toggle: var(--light-background-variant01);
+  }
 }
-
-*,
-*::before,
-*::after {
-  box-sizing: inherit;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: var(--font-inter);
-  background: var(--background);
-  color: var(--text-color);
-  transition: 0.5s background ease;
-}
-
-.visually-hidden {
-  position: absolute;
-  left: -10000px;
-  top: auto;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-}
-
 .container {
   padding: 0 1.5625rem;
   max-width: 69.375rem;
@@ -306,30 +294,21 @@ body {
   width: 3.125rem;
 }
 .theme-toggle-wrapper .theme-toggle-container {
-=======
-.theme-toggle-container {
->>>>>>> c73022178a8e9ee154cffd7f22b95f040b9cbaef
-  border: 1px solid var(--font-color);
-  background-color: var(--light-background-variant01);
-  color: var(--font-color);
   align-items: center;
-  overflow: hidden;
+  background-color: var(--dark-background-variant01);
+  border: 1px solid var(--font-color01);
   border-radius: 0.75rem;
-  width: 100%;
+  color: var(--text-color);
   height: 100%;
+  overflow: hidden;
   position: relative;
+  width: 100%;
   z-index: 101;
 }
-<<<<<<< HEAD
 .theme-toggle-wrapper .theme-toggle-container .theme-toggle {
-  border: 1px solid var(--font-color);
+  border: 1px solid var(--font-color01);
   background-color: transparent;
   height: 100%;
-=======
-.theme-toggle-container .theme-toggle {
-  border: 1px solid var(--font-color);
-  background-color: transparent;
->>>>>>> c73022178a8e9ee154cffd7f22b95f040b9cbaef
   width: 1.5rem;
   height: 1.5rem;
   top: -0.0625rem;
@@ -338,11 +317,7 @@ body {
   transition: 0.5s all ease;
   z-index: 102;
 }
-<<<<<<< HEAD
 .theme-toggle-wrapper .theme-toggle-container .theme-toggle-background {
-=======
-.theme-toggle-container .theme-toggle-background {
->>>>>>> c73022178a8e9ee154cffd7f22b95f040b9cbaef
   border-radius: 0.75rem;
   width: 100%;
   height: 100%;
@@ -353,18 +328,14 @@ body {
   align-items: center;
   overflow: hidden;
 }
-<<<<<<< HEAD
 .theme-toggle-wrapper .theme-toggle-container.theme-toggle-container:hover {
-=======
-.theme-toggle-container.theme-toggle-container:hover {
->>>>>>> c73022178a8e9ee154cffd7f22b95f040b9cbaef
   cursor: pointer;
 }
 
-body.light-mode #theme-toggle {
+body.light #theme-toggle {
   transform: translateX(1.625rem);
 }
-body.light-mode #theme-toggle-background::before {
+body.light #theme-toggle-background::before {
   content: "";
   position: absolute;
   right: calc(100% - 20px);
@@ -375,7 +346,7 @@ body.light-mode #theme-toggle-background::before {
   background-color: #262626;
   transition: 0.2s ease-out;
 }
-body.light-mode #theme-toggle-background::after {
+body.light #theme-toggle-background::after {
   content: "";
   position: absolute;
   right: calc(100% - 27px);
@@ -387,23 +358,23 @@ body.light-mode #theme-toggle-background::after {
   background-color: white;
   transition: 0.2s ease-out;
 }
-body.dark-mode #theme-toggle {
+body.dark #theme-toggle {
   transform: translateX(-0.0625rem);
 }
-body.dark-mode #theme-toggle-background::before {
+body.dark #theme-toggle-background::before {
   content: "";
   position: absolute;
   right: 6px;
   width: 14px;
   height: 14px;
-  background-color: #ffd712;
+  background-color: #ffffff;
   filter: blur(4px);
   transition: 0.2s ease-out;
 }
-body.dark-mode #theme-toggle-background::after {
+body.dark #theme-toggle-background::after {
   content: "";
   position: absolute;
-  background-color: #ffd712;
+  background-color: #ffffff;
   width: 12px;
   height: 12px;
   top: initial;
