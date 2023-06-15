@@ -12,10 +12,10 @@
     width: rem(50);
     .theme-toggle-container {
         align-items: center;
-        background-color: var(--dark-background-variant01);
+        background-color: var(--background01);
         border: 1px solid var(--font-color01);
         border-radius: 0.75rem;
-        color: var(--text-color);
+        color: var(--font-color01);
         height: 100%;
         overflow: hidden;
         position: relative;

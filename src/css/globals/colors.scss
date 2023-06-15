@@ -25,16 +25,20 @@
         Dark theme
         Light theme
     */
-    --dark-background-variant01: hsl(0, 0%, 7%);
-    --dark-background-variant02: hsl(0, 0%, 5%);
+    --dark-background01: hsl(0, 0%, 7%);
+    --dark-background02: hsl(0, 0%, 5%);
     --dark-background-opacity: hsl(0, 0%, 7%);
-    --dark-font-variant01: hsl(228, 34%, 66%);
-    --dark-font-variant02: hsl(0, 0%, 100%);
+    --dark-font01: hsl(228, 34%, 66%);
+    --dark-font02: hsl(0, 0%, 100%);
 
-    --light-background-variant01: hsl(0, 0%, 100%);
-    --light-background-variant02: hsl(44, 89%, 93%);
-    --light-font-variant01: hsl(230, 12%, 44%);
-    --light-font-variant02: hsl(230, 17%, 14%);
+    --light-background01: hsl(0, 0%, 100%);
+    --light-background02: hsl(44, 89%, 93%);
+    --light-font01: hsl(230, 12%, 44%);
+    --light-font02: hsl(230, 17%, 14%);
+
+    /*
+        General variables for backgrounds and font colors
+    */
 }
 
 /*
@@ -44,25 +48,28 @@
 */
 
 body.light {
-    --background01: var(--light-background-variant01);
-    --background02: var(--light-background-variant02)
-    --font-color01: var(--light-font-variant01);
-    --font-color02: var(--light-font-variant02);
+    --background01: var(--light-background01);
+    --background02: var(--light-background02);
+    --font-color01: var(--light-font02);
+    --font-color02: var(--light-font01);
+    --toggle: var(--light-background01);
 }
 
 body.dark {
-    --background01: var(--dark-background-variant01);
-    --background02: var(--dark-background-variant02);
-    --font-color01: var(--dark-font-variant01);
-    --font-color02: var(--dark-font-variant02);
+    --background01: var(--dark-background01);
+    --background02: var(--dark-background02);
+    --font-color01: var(--dark-font02);
+    --font-color02: var(--dark-font01);
+    --toggle: var(--light-background01);
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
-        --background: var(--dark-background-variant01);
-        --text-color01: var(--dark-font-variant02);
-        --text-color02: var(--dark-font-variant01);
-        --toggle: var(--light-background-variant01);
+        --background01: var(--dark-background01);
+        --background02: var(--dark-background02);
+        --font-color01: var(--dark-font02);
+        --font-color02: var(--dark-font01);
+        --toggle: var(--light-background01);
         // --toggle-bg: linear-gradient(
         //     225deg,
         //     var(--toggle-bg-end) 0%,
@@ -76,10 +83,11 @@ body.dark {
 
 @media (prefers-color-scheme: light) {
     :root {
-        --background: var(--light-background-variant01);
-        --text-color01: var(--light-font-variant01);
-        --text-color02: var(--dark-background-variant01);
-        --toggle: var(--light-background-variant01);
+        --background01: var(--light-background01);
+        --background02: var(--light-background02);
+        --font-color01: var(--light-font02);
+        --font-color02: var(--light-font01);
+        --toggle: var(--light-background01);
         // --toggle-bg: linear-gradient(
         //     225deg,
         //     var(--toggle-bg-end) 0%,

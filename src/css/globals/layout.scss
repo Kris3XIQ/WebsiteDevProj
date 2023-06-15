@@ -27,17 +27,17 @@
   
 /* Track */
 ::-webkit-scrollbar-track {
-    background: var(--background2);
+    background: var(--background02);
 }
   
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    background: var(--text-color);
+    background: var(--font-color01);
 }
   
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: var(--text-color2);
+    background: var(--font-color02);
 }
 
 .hidden {
